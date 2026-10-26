@@ -2,10 +2,6 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from collections import deque
 
-# ==========================================
-# 1. ALGORITHM LOGIC (Separated from GUI) finalized code 
-# ==========================================
-
 class Node:
     """Class representing a node in the Huffman Tree."""
     def __init__(self, char, freq, left=None, right=None):
@@ -131,10 +127,7 @@ def generate_codes(node, current_code, codes_dict):
     generate_codes(node.left, current_code + "0", codes_dict)
     generate_codes(node.right, current_code + "1", codes_dict)
 
-
-# ==========================================
 # 2. GUI APPLICATION (tkinter)
-# ==========================================
 
 class HuffmanApp:
     def __init__(self, root):
